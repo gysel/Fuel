@@ -363,7 +363,7 @@ Fuel.upload("/post").sources { request, url ->
 
 ``` Kotlin
 val formData = listOf("Email" to "mail@example.com", "Name" to "Joe Smith" )
-Fuel.upload("/post", param = formData)
+Fuel.upload("/post", parameters = formData)
     //Upload normally requires a file, but we can give it an empty list of `DataPart`
     .dataParts { request, url -> listOf<DataPart>() } 
     .responseString { request, response, result ->
